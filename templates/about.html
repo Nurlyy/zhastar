@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Біз туралы   |   О нас{% endblock title %}
+{% block navbar %}<nav class="navbar navbar-expand-lg navbar-light position-relative" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            
+            <i class="fas fa-bars" style="width:50px;"></i>
+        </button>
+        <img src="{%static 'images/Logo.svg'%}" id="navbar_logotip"/>    
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'home' %}" id="navbar_textMain">Біз туралы</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'structure' %}" id="navbar_text">Құрылым</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'projects' %}" id="navbar_text">Жобалар</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contact' %}" id="navbar_text">Байланыс</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>{% endblock navbar %}
+
+{% block content %}<div id="main_div">
+    <div class="container px-4 px-lg-5">
+        <div class="mainpage_text_div">
+            <p id="mainpage_textTitle">
+                Біз туралы   |   О нас</p>
+            <p id="mainpage_text">
+                Жастар ресурстық орталығы немесе ЖРО – жастардың әлеуметтік және тұлғалық дамуына жәрдемдесетін және жастар ұйымдарының қызметіне қолдау көрсететін ұйым.
+
+Молодежный ресурсный центр или МРЦ -организация, содействующая социальному и личностному развитию молодежи и оказывающая поддержку деятельности молодежных организаций.
+
+            </p>
+            <p id="mainpage_text">
+                «Семей қаласының Жастар Ресурстық орталығы»  
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container px-4 px-lg-5">
+    <div class="mainpage_text_div" style="margin-bottom: 30px;">
+        <iframe id="iframe"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+    </div>
+</div>{% endblock content %}
