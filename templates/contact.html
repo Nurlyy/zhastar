@@ -12,21 +12,21 @@
                 <img src="{% static 'images/Logo.svg'%}" id="navbar_logotip"/>    
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'home' %}" id="navbar_text">Біз туралы</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'structure' %}" id="navbar_text">Құрылым</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'projects' %}" id="navbar_text">Жобалар</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contact' %}" id="navbar_textMain">Байланыс</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'home' %}" id="navbar_text">Bız turaly</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'structure' %}" id="navbar_text">Qūrylym</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'projects' %}" id="navbar_text">Jobalar</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contact' %}" id="navbar_textMain">Bailanys</a></li>
                     </ul>
                 </div>
             </div>
         </nav>{% endblock navbar %}
         
 
-        {% block content %}<div class="container px-4 px-lg-5">
+        {% block content %}<div id="cn_div"><div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div id="vidy_uslug">
-                        <h1 id="h1_title">Байланыс  |  Связь</h1>
-                        <br><br><br><br>
+                        <h1 id="h1_title">Bailanys  |  Связь</h1>
+                        <br><br>
                     </div>
                 
                     <div style="text-align: center;">
@@ -34,8 +34,37 @@
                         <p id="contact_text">kgu.semey@mail.ru</p>
                         <p id="contact_text">87025539763 </p>
                     </div>
+
+                    <div style="text-align: center;">
+                        <br>
+                        <p id="contact_text" >
+                            Anonimdı ötınış<br>
+                            Анонимное обращение
+                        </p>
+
+                        <form method = "post" action=".">
+                            {% csrf_token %}
+                            <span class="subheading">
+                                <div class="media-content">
+                                    {% comment %} {{ form.as_p }} {% endcomment %}
+                                    {% for field in form %}
+                                        {{field}}<br>
+                                    {% endfor %}
+                                </div>
+                            </span>
+                            <br>
+                            <div class="field">
+                                <div class="control">
+                                    <button style="background: transparent; border: none;"><a id="btn_registration">
+                                        Jiberu
+                                    </a></button>
+                                </div>
+                        </div>
+                                
+                        </form>
+                    </div>
                     
                 </div>
-        </div>
+        </div></div>
 
         <br><br><br><br>{% endblock content %}

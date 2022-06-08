@@ -54,3 +54,6 @@ class Structure(models.Model):
     def __str__(self):
         return self.full_name
     
+    
+class Appeal(models.Model):
+    text = models.TextField()

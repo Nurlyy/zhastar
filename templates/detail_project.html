@@ -10,10 +10,10 @@
                 <img src="{%static 'images/Logo.svg'%}" id="navbar_logotip"/>    
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'home' %}" id="navbar_text">Біз туралы</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'structure' %}" id="navbar_text">Құрылым</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'projects' %}" id="navbar_textMain">Жобалар</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contact' %}" id="navbar_text">Байланыс</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'home' %}" id="navbar_text">Bız turaly</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'structure' %}" id="navbar_text">Qūrylym</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'projects' %}" id="navbar_textMain">Jobalar</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contact' %}" id="navbar_text">Bailanys</a></li>
                     </ul>
                 </div>
             </div>
@@ -21,7 +21,7 @@
 
         
 
-{% block content %}<div class="container px-4 px-lg-5">
+{% block content %}<div id="pr_div"><div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div id="vidy_uslug">
                         <h1 id="h1_title">{{project.title}}</h1>
@@ -29,5 +29,5 @@
                 </div>
                 <p id="detail_text">{{project.text}}</p>
                 <br><br><br><br>
-                </div>
+                </div></div>
         </div>{% endblock content %}
